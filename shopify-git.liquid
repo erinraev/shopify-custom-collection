@@ -1,0 +1,26 @@
+
+ <div data-section-id="{{ section.id }}" data-section-type="collection-template">
+  {% assign header_title = collection.title %}
+  {% include 'page_header' with header_title %}
+
+   {% if collection.title contains 'Google Analytics' %}
+    {% section 'ga-bundle' %}
+   {% endif %}
+
+   {% if collection.title contains 'SEO' %}
+    {% section 'seo-bundle' %}
+   {% endif %}
+
+   {% if collection.title contains 'Content Marketing' %}
+    {% section 'content-bundle' %}
+   {% endif %}
+
+   {% if collection.title contains 'Email Marketing' %}
+    {% section 'email-bundle' %}
+   {% endif %}
+
+
+  {% section 'custom-collection-template' %}
+
+</div>
+   
